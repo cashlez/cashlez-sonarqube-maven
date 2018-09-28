@@ -1,4 +1,4 @@
-FROM maven:jdk-8-alpine
+FROM maven:alpine
 
 ENV SONAR_VERSION=7.4 \
     SONARQUBE_HOME=/opt/sonarqube
@@ -11,7 +11,6 @@ RUN set -x \
     && apk add --no-cache libressl wget \
     && apk add --no-cache su-exec \
     && apk add --no-cache bash \
-
     && mkdir /opt \
     && cd /opt \
     && wget -O sonarqube.zip --no-verbose https://sonarsource.bintray.com/Distribution/sonarqube/sonarqube-$SONAR_VERSION.zip \
