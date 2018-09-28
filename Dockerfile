@@ -1,6 +1,6 @@
 FROM maven:alpine
 
-ENV SONAR_VERSION=7.4 \
+ENV SONAR_VERSION=7.3 \
     SONARQUBE_HOME=/opt/sonarqube
 
 # Http port
