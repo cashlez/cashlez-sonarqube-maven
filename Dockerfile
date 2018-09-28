@@ -13,7 +13,7 @@ RUN set -x \
     && apk add --no-cache bash \
 
     && mkdir /opt \
-    && cd /opt 
+    && cd /opt \
     && wget -O sonarqube.zip --no-verbose https://sonarsource.bintray.com/Distribution/sonarqube/sonarqube-$SONAR_VERSION.zip \
     && wget -O sonarqube.zip.asc --no-verbose https://sonarsource.bintray.com/Distribution/sonarqube/sonarqube-$SONAR_VERSION.zip.asc \
     && gpg --batch --verify sonarqube.zip.asc sonarqube.zip \
